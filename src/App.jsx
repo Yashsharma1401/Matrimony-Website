@@ -1,11 +1,17 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import ALLRoutes from "./ALLRoutes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import Admin from "./components/Admin";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ALLRoutes />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/admin" element={<Admin />} />
+      
+      {/* You can add more routes here */}
+    </Routes>
     </BrowserRouter>
   );
 };
